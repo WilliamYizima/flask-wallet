@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+
+{% block main %}
+<form action="{{url_for("api/receipts.insert")}}" method="POST" >
+    <div class="field">
+        <label class="label">Receipts</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Text input" name="receipts">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Month</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Text input" name="month">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Year</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Text input" name="year">
+        </div>
+    </div>
+
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link">Submit</button>
+        </div>
+        <div class="control">
+            <button class="button is-link is-light">Cancel</button>
+        </div>
+    </div>
+</form>
+
+{% endblock main %}
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,3 +46,4 @@
     Hola!
 </body>
 </html>
+>>>>>>> origin/master
