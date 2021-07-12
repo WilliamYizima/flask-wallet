@@ -5,6 +5,7 @@ class Receipts(db.Model):
     id = db.Column("id", db.Integer, primary_key=True)
     receipts_value = db.Column("rec_value",db.Float)
     receipts_month = db.Column("rec_month",db.Integer)
+<<<<<<< HEAD
     receipts_year = db.Column("rec_year",db.Integer)
 
     @staticmethod
@@ -16,3 +17,6 @@ class Receipts(db.Model):
         
         db.session.add(receipts)
         db.session.commit()
+=======
+    receipts_year = db.Column("rec_year",db.Integer)
+>>>>>>> origin/master

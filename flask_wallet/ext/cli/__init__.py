@@ -1,6 +1,9 @@
 import click
 from flask_wallet.ext.db import db
+<<<<<<< HEAD
 from flask_wallet.ext.db.models import Receipts
+=======
+>>>>>>> origin/master
 
 def init_app(app):
 
@@ -14,6 +17,7 @@ def init_app(app):
         """Comando teste do CLI"""
         db.create_all()
 
+<<<<<<< HEAD
         click.echo("Criei as tabelas necessárias")
     
     @app.cli.command()
@@ -28,3 +32,6 @@ def init_app(app):
                                         receipts_year=year)
 
         click.echo(f"Inseri a receita no valor de:{receipts} do mês {month} do ano {year}")
+=======
+        click.echo("Criei as tabelas necessárias")
+>>>>>>> origin/master
