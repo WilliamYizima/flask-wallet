@@ -1,5 +1,6 @@
 import click
 from flask_wallet.ext.db import db
+from flask_wallet.ext.db.models import Receipts
 
 def init_app(app):
 
@@ -14,3 +15,16 @@ def init_app(app):
         db.create_all()
 
         click.echo("Criei as tabelas necessárias")
+    
+    @app.cli.command()
+    @click.option("--receipts", "-r")
+    @click.option("--month", "-m")
+    @click.option("--year", "-y")
+    def add_receipts(receipts, month, year):
+        """fazendo um teste para inserir uma receita com as flags: -r(receita), -m(mês), -y(ano)"""
+        receipts_query = Receipts.add_receipts(
+                                        receipts_value=receipts, 
+                                        receipts_month=month, 
+                                        receipts_year=year)
+
+        click.echo(f"Inseri a receita no valor de:{receipts} do mês {month} do ano {year}")
